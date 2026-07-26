@@ -3,40 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlanSense</title>
+
     <style>
         body {
             background-color: black;
             color: white;
             text-align: center;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
         }
+
         .header {
             display: flex;
-            align-items: left;
+            align-items: center;
             justify-content: flex-start;
-            margin-top: 0px;
+            margin-top: 0;
         }
+
         .logo {
             width: 75px;
             height: 75px;
-            background-color: gray;
-            margin-right: 0px;
+            margin-right: 10px;
         }
+
         .picture {
             width: 900px;
-            height: 650px;
-            background-color: gray;
+            max-width: 100%;
+            height: auto;
             display: block;
             margin: 20px auto;
         }
+
         .bullet-section {
             text-align: left;
             width: 80%;
             margin: 20px auto;
             font-size: 20px;
         }
+
+        .download-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin: 30px auto 20px;
+            padding: 14px 28px;
+            background-color: #5B50C2;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .download-button:hover {
+            background-color: #7267d9;
+            transform: translateY(-2px);
+        }
+
+        .download-button .icon {
+            font-size: 26px;
+        }
     </style>
 </head>
+
 <body>
 
     <div class="header">
@@ -44,20 +76,23 @@
         <h1>PlanSense</h1>
     </div>
 
-    <!-- Bullet Points Area -->
     <div class="bullet-section">
         <ul>
-            <li>To use PlanSense, tap a day and then plus button to create your entires, then tap the paperplane symbol</li>
-            <li>Support: Find in the app, live support and email address</li>
-            <li>Important: Watch for fraud email addresses, make sure to check username by hovering over sender</li>
+            <li>To use PlanSense, tap a day and then the plus button to create your entries, then tap the paper plane symbol.</li>
+            <li>Support: Find live support and our email address inside the app.</li>
+            <li>Important: Watch for fraudulent email addresses. Verify the sender by hovering over the email address before responding.</li>
         </ul>
     </div>
 
-    <img src="Pic2.png" alt="Logo" class="picture">
+    <img src="Pic2.png" alt="PlanSense Screenshot" class="picture">
 
-</body>
-</html>
-
+    <a href="YOUR_APP_STORE_LINK_HERE"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="download-button">
+        <span class="icon">📱</span>
+        Get App
+    </a>
 
 </body>
 </html>
