@@ -32,7 +32,6 @@ body{
 
 }
 
-/* Animated Background */
 
 body::before{
 
@@ -82,6 +81,7 @@ z-index:-1;
 
 }
 
+
 @keyframes float1{
 
 from{transform:translateY(0px);}
@@ -96,7 +96,6 @@ to{transform:translateX(120px);}
 
 }
 
-/* Container */
 
 .container{
 
@@ -105,7 +104,6 @@ margin:auto;
 
 }
 
-/* Hero */
 
 .hero{
 
@@ -125,11 +123,13 @@ opacity:0;
 
 }
 
+
 .left{
 
 max-width:560px;
 
 }
+
 
 .logoRow{
 
@@ -143,6 +143,7 @@ margin-bottom:25px;
 
 }
 
+
 .logo{
 
 width:78px;
@@ -155,11 +156,13 @@ transition:.4s;
 
 }
 
+
 .logo:hover{
 
 transform:rotate(-5deg) scale(1.05);
 
 }
+
 
 h1{
 
@@ -173,6 +176,15 @@ margin-bottom:12px;
 
 }
 
+
+.titleLink{
+
+text-decoration:none;
+color:white;
+
+}
+
+
 .subtitle{
 
 font-size:22px;
@@ -185,7 +197,6 @@ margin-bottom:40px;
 
 }
 
-/* Features */
 
 .features{
 
@@ -196,6 +207,7 @@ gap:18px;
 margin-bottom:45px;
 
 }
+
 
 .feature{
 
@@ -219,6 +231,7 @@ transition:.35s;
 
 }
 
+
 .feature:hover{
 
 transform:translateX(10px);
@@ -227,13 +240,13 @@ background:rgba(255,255,255,.08);
 
 }
 
+
 .feature span{
 
 font-size:26px;
 
 }
 
-/* Button */
 
 .download{
 
@@ -263,6 +276,7 @@ transition:.35s;
 
 }
 
+
 .download:hover{
 
 transform:translateY(-4px) scale(1.03);
@@ -271,7 +285,48 @@ box-shadow:0 25px 60px rgba(108,92,255,.65);
 
 }
 
-/* Phone Card */
+
+/* YouTube Button */
+
+.youtube{
+
+display:inline-flex;
+
+margin-top:15px;
+
+align-items:center;
+
+gap:14px;
+
+padding:18px 34px;
+
+border-radius:60px;
+
+background:#ff0000;
+
+text-decoration:none;
+
+font-size:20px;
+
+font-weight:700;
+
+color:white;
+
+box-shadow:0 18px 45px rgba(255,0,0,.35);
+
+transition:.35s;
+
+}
+
+
+.youtube:hover{
+
+transform:translateY(-4px) scale(1.03);
+
+}
+
+
+/* Phone */
 
 .phoneCard{
 
@@ -291,7 +346,10 @@ animation:fadeRight 1.2s ease forwards;
 
 opacity:0;
 
+cursor:pointer;
+
 }
+
 
 .phone{
 
@@ -305,7 +363,72 @@ margin:auto;
 
 }
 
-/* Footer */
+
+/* Modal */
+
+.modal{
+
+display:none;
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.65);
+
+backdrop-filter:blur(10px);
+
+align-items:center;
+
+justify-content:center;
+
+z-index:100;
+
+}
+
+
+.modalBox{
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+
+padding:40px;
+
+border-radius:30px;
+
+text-align:center;
+
+box-shadow:0 30px 80px black;
+
+}
+
+
+.modalBox h2{
+
+margin-bottom:25px;
+
+font-size:28px;
+
+}
+
+
+.close{
+
+margin-top:20px;
+
+display:block;
+
+cursor:pointer;
+
+color:#aaa;
+
+}
+
 
 .footer{
 
@@ -319,7 +442,6 @@ font-size:15px;
 
 }
 
-/* Animations */
 
 @keyframes fadeUp{
 
@@ -341,6 +463,7 @@ transform:translateY(0);
 
 }
 
+
 @keyframes fadeRight{
 
 from{
@@ -361,7 +484,6 @@ transform:translateX(0);
 
 }
 
-/* Mobile */
 
 @media(max-width:950px){
 
@@ -409,29 +531,47 @@ font-size:52px;
 
 </head>
 
+
 <body>
+
 
 <div class="container">
 
+
 <section class="hero">
+
 
 <div class="left">
 
+
 <div class="logoRow">
+
 
 <img src="pic.png" class="logo">
 
+
+<a class="titleLink"
+href="https://apps.apple.com/us/app/plansense/id6503712817"
+target="_blank">
+
 <h1>PlanSense</h1>
 
+</a>
+
+
 </div>
+
 
 <p class="subtitle">
 
 A beautifully designed planner that keeps your notes, schedules,
 events and productivity organized in one elegant place.
+
 </p>
 
+
 <div class="features">
+
 
 <div class="feature">
 <span>📝</span>
@@ -441,6 +581,7 @@ Tap any day, press the <b>+</b> button, then save using the paper plane.
 </div>
 </div>
 
+
 <div class="feature">
 <span>💬</span>
 <div>
@@ -448,6 +589,7 @@ Tap any day, press the <b>+</b> button, then save using the paper plane.
 Live support and email assistance are available directly inside the app.
 </div>
 </div>
+
 
 <div class="feature">
 <span>🔒</span>
@@ -457,7 +599,9 @@ Always verify the sender's email address before responding to support messages.
 </div>
 </div>
 
+
 </div>
+
 
 <a href="https://apps.apple.com/us/app/plansense/id6503712817"
 target="_blank"
@@ -468,17 +612,36 @@ class="download">
 
 </a>
 
+
+<br>
+
+
+<a href="https://www.youtube.com/@PlanSense"
+target="_blank"
+rel="noopener noreferrer"
+class="youtube">
+
+▶️ PlanSense YouTube Channel
+
+</a>
+
+
 </div>
 
-<div class="phoneCard">
+
+<div class="phoneCard" onclick="openModal()">
+
 
 <img src="phones.png"
 class="phone"
 alt="PlanSense">
 
+
 </div>
 
+
 </section>
+
 
 <div class="footer">
 
@@ -486,7 +649,61 @@ alt="PlanSense">
 
 </div>
 
+
 </div>
+
+
+
+<div class="modal" id="appModal">
+
+
+<div class="modalBox">
+
+
+<h2>Download PlanSense</h2>
+
+
+<a href="https://apps.apple.com/us/app/plansense/id6503712817"
+target="_blank"
+class="download">
+
+📱 Open App Store
+
+</a>
+
+
+<span class="close" onclick="closeModal()">
+
+Close
+
+</span>
+
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+function openModal(){
+
+document.getElementById("appModal").style.display="flex";
+
+}
+
+
+function closeModal(){
+
+document.getElementById("appModal").style.display="none";
+
+}
+
+
+</script>
+
 
 </body>
 </html>
